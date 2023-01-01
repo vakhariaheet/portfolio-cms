@@ -4,40 +4,49 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Title',
+      name: 'heroTitle',
+      title: 'Hero: Title',
       type: 'string',
     },
     {
-      name: 'description',
-      title: 'Description',
+      name: 'heroDescription',
+      title: 'Hero: Description',
       type: 'text',
     },
     {
-      name: 'coverImage',
-      title: 'Cover image',
+      name: 'heroCoverImage',
+      title: 'Hero: Cover image',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
-
     {
-      name: 'tags',
-      title: 'Tags',
+      name: 'heroResume',
+      title: 'Hero: Resume',
+      type: 'file',
+    },
+    {
+      name: 'heroCTA',
+      title: 'Hero: CTA',
+      type: 'string',
+    },
+    {
+      name: 'heroTags',
+      title: 'Hero: Tags',
       type: 'array',
       of: [
         {
           type: 'document',
           fields: [
             {
-              name: 'name',
-              title: 'Name',
+              name: 'tagName',
+              title: 'Tag: Name',
               type: 'string',
             },
             {
-              name: 'type',
-              title: 'Type',
+              name: 'tagType',
+              title: 'Tag: Type',
               type: 'string',
               options: {
                 list: [
@@ -56,18 +65,23 @@ export default {
       },
     },
     {
-      name: 'myskills_title',
-      title: 'My Skills Title',
+      name: 'skillsTitle',
+      title: 'My Skills: Title',
       type: 'string',
     },
     {
-      name: 'projects_title',
-      title: 'Projects Title',
+      name: 'projectsTitle',
+      title: 'Projects: Title',
+      type: 'string',
+    },
+    {
+      name: 'contactTitle',
+      title: 'Contact: Title',
       type: 'string',
     },
     {
       name: 'socials',
-      title: 'Socials',
+      title: 'Contact: Socials',
       type: 'array',
       of: [
         {
@@ -97,6 +111,44 @@ export default {
       options: {
         layout: 'tags',
       },
+    },
+    {
+      name: 'footerSholaks',
+      title: 'Footer: Sholaks',
+      type: 'array',
+      of: [
+        {
+          type: 'document',
+          fields: [
+            {
+              name: 'sholak',
+              title: 'Sholak',
+              type: 'array',
+              of: [
+                {
+                  type: 'string',
+                }
+              ],
+            },
+            {
+              name: 'author',
+              title: 'Footer: Sholak Author',
+              type: 'string',
+            },
+            {
+              name: 'translation',
+              title: 'Footer: Sholak Translation',
+              type: 'string',
+            }
+          ],
+        }
+      ]
+    },
+    
+    {
+      name: 'footerText',
+      title: 'Footer: Text',
+      type: 'string',
     },
   ],
 }
