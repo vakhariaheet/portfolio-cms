@@ -150,5 +150,16 @@ export default {
       title: 'Footer: Text',
       type: 'string',
     },
+    {
+      name: 'achievementsTitle',
+      title: 'Achievements: Title',
+      type: 'string',
+    },
+    {
+      name: 'achievements',
+      title: 'Achievements',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'achievement' }] }],
+    },
   ],
 }
